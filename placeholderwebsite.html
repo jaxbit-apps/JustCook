@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JustCook — Save Any Recipe, Clean & Fast</title>
+  <meta name="description" content="JustCook by Jaxbit LLC: save and organize recipes from any website. One click to capture title, ingredients, and steps. Free to try, $1/month for AI parsing." />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="JustCook — Save Any Recipe" />
+  <meta property="og:description" content="One-click recipe capture and a clean cookbook view. Free to try." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://YOUR-USERNAME.github.io/justcook/" />
+  <meta property="og:image" content="https://YOUR-USERNAME.github.io/justcook/cover.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Brand touch -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23000000' d='M6 6h20a2 2 0 012 2v16a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2zm3 4h14v2H9v-2zm0 5h14v2H9v-2zm0 5h10v2H9v-2z'/%3E%3C/svg%3E" />
+
+  <style>
+    :root { --bg:#0f1115; --card:#161a22; --muted:#9aa3b2; --text:#e6e9ef; --brand:#3ddc84; }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:960px;margin:0 auto;padding:40px 20px}
+    .nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+    .logo{font-weight:800;letter-spacing:.2px}
+    .badge{font-size:12px;color:var(--muted)}
+    .hero{display:grid;gap:22px;padding:32px;border:1px solid #232938;background:linear-gradient(180deg,#141822,rgba(20,24,34,0.7));border-radius:20px}
+    .hero h1{margin:0;font-size:40px;line-height:1.1}
+    .hero p{margin:0;color:var(--muted);max-width:60ch}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
+    .btn{padding:12px 16px;border-radius:12px;border:1px solid #2a3140;background:#1a2030}
+    .btn.primary{background:var(--brand);color:#0e1218;border-color:transparent;font-weight:700}
+    .btn.ghost{border-color:#2a3140}
+    .grid{display:grid;gap:16px;margin-top:28px}
+    @media(min-width:760px){ .grid{grid-template-columns:repeat(3,1fr)} }
+    .card{background:var(--card);border:1px solid #232938;border-radius:16px;padding:18px}
+    .card h3{margin:0 0 6px}
+    .muted{color:var(--muted)}
+    .section{margin-top:40px}
+    .footer{margin-top:40px;color:var(--muted);font-size:14px}
+    .legal{opacity:.9}
+    .pill{display:inline-block;font-size:12px;background:#1c2332;border:1px solid #2a3140;border-radius:999px;padding:6px 10px;margin-top:8px}
+    .price{font-size:28px;font-weight:800}
+    .sep{height:1px;background:#232938;margin:24px 0}
+    .mono{font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace; font-size: 12px; color: var(--muted);}
+  </style>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"SoftwareApplication",
+    "name":"JustCook",
+    "applicationCategory":"BrowserExtension",
+    "operatingSystem":"Chrome",
+    "offers":{"@type":"Offer","price":"1.00","priceCurrency":"USD"},
+    "publisher":{"@type":"Organization","name":"Jaxbit LLC"}
+  }
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <nav class="nav">
+      <div class="logo">JustCook <span class="badge">by Jaxbit LLC</span></div>
+      <a class="btn ghost" href="mailto:hello@yourdomain.com">Contact</a>
+    </nav>
+
+    <header class="hero">
+      <div>
+        <h1>Save any recipe. Zero clutter.</h1>
+        <p>JustCook captures the title, ingredients, and steps from any recipe page and saves it to your private, searchable cookbook. One-click Quick Save or AI-powered parsing for messy sites.</p>
+        <div class="cta">
+          <!-- Replace with your Chrome Web Store URL when live -->
+          <a class="btn primary" href="#">Add to Chrome</a>
+          <a class="btn" href="#how">How it works</a>
+        </div>
+        <div class="pill">Free to try • $1/mo Pro</div>
+      </div>
+    </header>
+
+    <section class="section grid">
+      <div class="card">
+        <h3>One-click Quick Save</h3>
+        <p class="muted">Stores the page’s structured recipe data instantly—no copy/paste.</p>
+      </div>
+      <div class="card">
+        <h3>AI Clean-Up</h3>
+        <p class="muted">When sites are messy, our AI extracts clean ingredients and steps.</p>
+      </div>
+      <div class="card">
+        <h3>Sync & Search</h3>
+        <p class="muted">Your cookbook syncs across devices. Fast search by title or ingredient.</p>
+      </div>
+    </section>
+
+    <section id="how" class="section">
+      <h2>How it works</h2>
+      <div class="grid">
+        <div class="card"><h3>1. Visit a recipe</h3><p class="muted">Open any recipe page on the web.</p></div>
+        <div class="card"><h3>2. Click JustCook</h3><p class="muted">Use Quick Save or “Save with AI”.</p></div>
+        <div class="card"><h3>3. Cook</h3><p class="muted">Open your clean, readable recipe in the Cookbook.</p></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Pricing</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Free</h3>
+          <p class="price">$0</p>
+          <p class="muted">10 saved recipes • Quick Save • Local backup</p>
+        </div>
+        <div class="card">
+          <h3>Pro</h3>
+          <p class="price">$1<span class="muted">/mo</span></p>
+          <p class="muted">AI parsing • Cloud sync • Priority support</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="sep"></div>
+
+    <footer class="footer">
+      <div><strong>Business:</strong> Jaxbit LLC</div>
+      <div><strong>Contact:</strong> <a href="mailto:hello@yourdomain.com">hello@yourdomain.com</a></div>
+      <div class="legal">© <span id="y"></span> Jaxbit LLC. All rights reserved.</div>
+      <div class="mono">This page is used for payment verification with Stripe.</div>
+    </footer>
+  </div>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
