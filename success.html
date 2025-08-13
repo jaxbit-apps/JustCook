@@ -110,48 +110,26 @@
   </div>
 
   <script>
-    // Check session and provide feedback
-    async function handleSuccess() {
+    (function() {
       const urlParams = new URLSearchParams(window.location.search);
       const sessionId = urlParams.get('session_id');
       const messageEl = document.getElementById('message');
-      
+
+      if (!messageEl) return;
+
       if (sessionId) {
-        // Wait a moment for webhook to process
-        setTimeout(() => {
-          messageEl.innerHTML = `
-            <p>🎉 Your subscription is now active!</p>
-            <p>You now have unlimited AI recipe extractions and access to all premium features.</p>
-            <p>You can close this tab and return to the JustCook extension.</p>
-            <p class="countdown">This tab will auto-close in <span id="countdown">5</span> seconds...</p>
-          `;
-          
-          // Countdown timer
-          let seconds = 5;
-          const countdownEl = document.getElementById('countdown');
-          const countdown = setInterval(() => {
-            seconds--;
-            if (countdownEl) countdownEl.textContent = seconds;
-            if (seconds <= 0) {
-              clearInterval(countdown);
-              window.close();
-            }
-          }, 1000);
-        }, 2000);
+        messageEl.innerHTML = `
+          <p>🎉 Your subscription is now active!</p>
+          <p>You now have unlimited AI recipe extractions and access to all premium features.</p>
+          <p>You can close this tab and return to the JustCook extension.</p>
+        `;
       } else {
         messageEl.innerHTML = `
           <p>✅ Success!</p>
           <p>You can close this tab and return to JustCook.</p>
         `;
-        
-        // Auto-close after a few seconds even without session_id
-        setTimeout(() => {
-          window.close();
-        }, 3000);
       }
-    }
-    
-    handleSuccess();
+    })();
   </script>
 </body>
 </html> 
