@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - justcook</title>
+    <style>
+        :root {
+            /* Dark theme matching your app */
+            --bg-primary: #1a1b1e;
+            --bg-secondary: #2c2d31;
+            --text-primary: #E7EAEE;
+            --text-secondary: #b0b3b8;
+            --border-color: #3e4042;
+            --accent-color: #4CA626;
+            --success-bg: #132f1a;
+            --success-text: #4CA626;
+            --error-bg: #3b1827;
+            --error-text: #eb6f92;
+            --button-primary: #4CA626;
+            --button-secondary: #3e4042;
+            --button-hover: #3E8A1F;
+            --input-bg: #2c2d31;
+            --card-bg: #2c2d31;
+            --card-hover: #3e4042;
+            --link-color: #4CA626;
+            --link-hover: #3E8A1F;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: var(--bg-primary);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+        }
+
+        .header {
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+            padding: 40px;
+            text-align: center;
+            color: var(--text-primary);
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background: var(--accent-color);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            color: white;
+        }
+
+        h1 { font-size: 32px; margin-bottom: 10px; font-weight: 600; color: var(--text-primary); }
+        .last-updated { opacity: 0.8; font-size: 14px; color: var(--text-secondary); }
+
+        .content { padding: 40px; background: var(--bg-primary); }
+
+        h2 {
+            color: var(--accent-color);
+            margin-top: 35px;
+            margin-bottom: 15px;
+            font-size: 24px;
+            font-weight: 600;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        h3 { color: var(--text-primary); margin-top: 25px; margin-bottom: 12px; font-size: 18px; font-weight: 600; }
+
+        p, li { margin-bottom: 12px; color: var(--text-primary); line-height: 1.8; }
+
+        ul { margin-left: 25px; margin-bottom: 20px; }
+        li { margin-bottom: 8px; }
+
+        .highlight-box {
+            background: var(--bg-secondary);
+            border-left: 4px solid var(--accent-color);
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+
+        .contact-info {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+        .contact-info h3 { color: var(--accent-color); margin-top: 0; }
+
+        a { color: var(--link-color); text-decoration: none; font-weight: 500; transition: color 0.2s ease; }
+        a:hover { color: var(--link-hover); text-decoration: underline; }
+
+        .table-container { overflow-x: auto; margin: 20px 0; border-radius: 8px; border: 1px solid var(--border-color); }
+        table { width: 100%; border-collapse: collapse; margin: 0; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid var(--border-color); }
+        th { background: var(--bg-secondary); font-weight: 600; color: var(--text-primary); }
+        td { background: var(--bg-primary); color: var(--text-primary); }
+
+        .footer {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+            padding: 30px 40px;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .toc {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .toc h3 { margin-top: 0; color: var(--text-primary); }
+        .toc ul { list-style: none; margin-left: 0; }
+        .toc li { margin-bottom: 8px; }
+        .toc a { color: var(--text-secondary); font-weight: normal; transition: color 0.2s ease; }
+        .toc a:hover { color: var(--accent-color); }
+
+        /* Theme toggle functionality */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 8px 12px;
+            color: var(--text-primary);
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 14px;
+            transition: all 0.2s ease;
+            z-index: 1000;
+        }
+        .theme-toggle:hover { background: var(--card-hover); }
+
+        /* Light theme variables */
+        [data-theme="light"] {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f5f5f5;
+            --text-primary: #3A3A3A;
+            --text-secondary: #6B7280;
+            --border-color: #E5E7EB;
+            --accent-color: #4CA626;
+            --success-bg: #e6f4ea;
+            --success-text: #4CA626;
+            --error-bg: #fce8e6;
+            --error-text: #c5221f;
+            --button-primary: #4CA626;
+            --button-secondary: #E5E7EB;
+            --button-hover: #3E8A1F;
+            --input-bg: #ffffff;
+            --card-bg: #ffffff;
+            --card-hover: #f0f0f0;
+            --link-color: #4CA626;
+            --link-hover: #3E8A1F;
+        }
+
+        .note { font-size: 13px; color: var(--text-secondary); }
+
+        @media (max-width: 768px) {
+            .content { padding: 25px; }
+            h1 { font-size: 26px; }
+            h2 { font-size: 20px; }
+            .theme-toggle {
+                position: relative; top: auto; right: auto;
+                margin-bottom: 20px; width: fit-content;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" id="themeToggle">🌙 Dark</button>
+    <div class="container">
+        <div class="header">
+            <div class="logo">🍳</div>
+            <h1>justcook Privacy Policy</h1>
+            <div class="last-updated">Last Updated: January 2025</div>
+        </div>
+
+        <div class="content">
+            <div class="highlight-box">
+                <strong>Our Commitment:</strong> justcook is committed to protecting your privacy. We believe in transparency about how we collect, use, and protect your information. This policy explains our practices in clear, simple language.
+            </div>
+
+            <div class="toc">
+                <h3>Table of Contents</h3>
+                <ul>
+                    <li><a href="#notice-at-collection">0. Notice at Collection (California)</a></li>
+                    <li><a href="#overview">1. Overview</a></li>
+                    <li><a href="#chrome-permissions">2. Chrome Extension Permissions</a></li>
+                    <li><a href="#information-we-collect">3. Information We Collect</a></li>
+                    <li><a href="#how-we-use">4. How We Use Your Information</a></li>
+                    <li><a href="#third-party">5. Third-Party Services</a></li>
+                    <li><a href="#data-storage">6. Data Storage & Security</a></li>
+                    <li><a href="#your-rights">7. Your Rights</a></li>
+                    <li><a href="#cookies">8. Cookies & Local Storage</a></li>
+                    <li><a href="#children">9. Children's Privacy</a></li>
+                    <li><a href="#changes">10. Changes to This Policy</a></li>
+                    <li><a href="#contact">11. Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- CPRA Notice at Collection -->
+            <h2 id="notice-at-collection">0. Notice at Collection (California)</h2>
+            <p>We collect the categories of personal information listed below for the purposes described. We <strong>do not sell</strong> or <strong>share</strong> personal information for cross-context behavioral advertising. We retain each category for the periods shown (or apply the stated criteria). You may learn more throughout this policy and exercise your rights in <em>Settings → Privacy</em> or by emailing <a href="mailto:jack.jaxbit@gmail.com">jack.jaxbit@gmail.com</a>. We honor opt-out preference signals where applicable (e.g., <strong>Global Privacy Control</strong>).</p>
+
+            <div class="table-container">
+                <table aria-label="Notice at Collection Categories">
+                    <thead>
+                        <tr>
+                            <th>Category (CPRA)</th>
+                            <th>Examples We Collect</th>
+                            <th>Purpose</th>
+                            <th>Disclosed to</th>
+                            <th>Retention</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Identifiers</strong></td>
+                            <td>Email</td>
+                            <td>Account creation, authentication, support</td>
+                            <td>Supabase (auth/db), email provider</td>
+                            <td>Life of account + 30 days (backups)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Internet / Electronic Activity</strong></td>
+                            <td>Feature usage, extraction method (JSON-LD vs AI), error logs</td>
+                            <td>Service operation, analytics, quality</td>
+                            <td>Supabase (logs)</td>
+                            <td>90 days (aggregated thereafter)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Commercial Information</strong></td>
+                            <td>Subscription status (Premium)</td>
+                            <td>Billing, account tiering</td>
+                            <td>Stripe</td>
+                            <td>As required for accounting/tax (up to 7 years)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>User Content</strong></td>
+                            <td>Saved recipes, folders/tags, source URLs</td>
+                            <td>Save/sync recipes across devices</td>
+                            <td>Supabase</td>
+                            <td>Until you delete; then purged within 30 days (backups roll off in 30 days)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Sensitive (Credentials)</strong></td>
+                            <td>Hashed password</td>
+                            <td>Authentication</td>
+                            <td>Supabase</td>
+                            <td>Life of account + 30 days</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="note">If our practices change, we will update this notice and the Chrome Web Store privacy disclosures before collecting new categories or using data for materially different purposes.</p>
+
+            <h2 id="overview">1. Overview</h2>
+            <p>justcook is a Chrome extension that helps you save, organize, and manage recipes from any website. This Privacy Policy describes how we handle your information when you use our extension and services.</p>
+            <p>We operate on three tiers of service:</p>
+            <ul>
+                <li><strong>Guest Mode:</strong> Limited functionality with no account required</li>
+                <li><strong>Free Account:</strong> Full basic features with cloud sync</li>
+                <li><strong>Premium Account:</strong> Unlimited AI-powered recipe extraction</li>
+            </ul>
+
+            <h2 id="chrome-permissions">2. Chrome Extension Permissions</h2>
+            <div class="highlight-box">
+                <p>Our Chrome extension uses a privacy-first approach with minimal permissions. We only access your current tab when you explicitly click our extension button. Here's exactly what we request and why:</p>
+            </div>
+            <h3>2.1 Required Permissions</h3>
+            <ul>
+                <li><strong>activeTab:</strong> Allows us to read the content of the current webpage when you click the extension button to extract recipe data. We only access the page you're actively viewing.</li>
+                <li><strong>scripting:</strong> Enables us to run our content script on recipe websites to detect and extract structured recipe data (JSON-LD format) or analyze page content for AI extraction.</li>
+                <li><strong>storage:</strong> Lets us save your recipes locally in Chrome's secure storage system for offline access and sync your data across devices when you're signed in.</li>
+                <li><strong>tabs:</strong> Allows us to detect when you're on a recipe website and update our extension icon accordingly. We do not read or store tab URLs or titles except when you invoke the extension, and we don't access other tabs or your browsing history.</li>
+            </ul>
+            <h3>2.2 Privacy-First Design</h3>
+            <ul>
+                <li><strong>No Host Permissions:</strong> We use Chrome's <em>activeTab</em> permission instead of broad host permissions, meaning we can only access the current tab when you explicitly click our extension button.</li>
+                <li><strong>On-Demand Access:</strong> We never access any webpage content unless you actively click our extension to extract a recipe.</li>
+                <li><strong>No Background Monitoring:</strong> Our extension does not run in the background or monitor your browsing activity.</li>
+            </ul>
+            <h3>2.3 What We Don't Access</h3>
+            <ul>
+                <li>We don't monitor your browsing history or track websites you visit.</li>
+                <li>We don't access page content unless you actively use our extension.</li>
+                <li>We don't read or modify content on pages other than recipe extraction.</li>
+                <li>We don't inject advertisements or tracking scripts.</li>
+            </ul>
+
+            <h2 id="information-we-collect">3. Information We Collect</h2>
+            <h3>3.1 Information You Provide</h3>
+            <ul>
+                <li><strong>Account Information:</strong> Email address and password when you create an account.</li>
+                <li><strong>Recipe Data:</strong> Recipes you save, including titles, ingredients, instructions, prep time, cook time, and servings.</li>
+                <li><strong>Organization Data:</strong> Custom folders and tags you create.</li>
+                <li><strong>Source Information:</strong> URLs of websites where you save recipes from.</li>
+            </ul>
+            <h3>3.2 Information Collected Automatically</h3>
+            <ul>
+                <li><strong>Usage Data:</strong> Features you use, extraction methods (JSON-LD vs AI), number of recipes saved.</li>
+                <li><strong>Guest Tokens:</strong> Anonymous identifiers for guest users to track usage limits.</li>
+                <li><strong>Extraction Metrics:</strong> Success/failure rates of recipe extraction (anonymized).</li>
+            </ul>
+            <h3>3.3 Information We Don't Collect</h3>
+            <ul>
+                <li>Browsing history outside of recipe extraction.</li>
+                <li>Personal information beyond what's needed for account creation.</li>
+                <li>Payment information (handled directly by Stripe).</li>
+            </ul>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Data Type</th>
+                            <th>Guest Mode</th>
+                            <th>Free Account</th>
+                            <th>Premium Account</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Email Address</td>
+                            <td>❌ Not collected</td>
+                            <td>✅ Required</td>
+                            <td>✅ Required</td>
+                        </tr>
+                        <tr>
+                            <td>Recipe Data</td>
+                            <td>✅ Local only</td>
+                            <td>✅ Synced to cloud</td>
+                            <td>✅ Synced to cloud</td>
+                        </tr>
+                        <tr>
+                            <td>Usage Analytics</td>
+                            <td>✅ Anonymous</td>
+                            <td>✅ Linked to account</td>
+                            <td>✅ Linked to account</td>
+                        </tr>
+                        <tr>
+                            <td>Payment Info</td>
+                            <td>❌ Not collected</td>
+                            <td>❌ Not collected</td>
+                            <td>✅ Via Stripe</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2 id="how-we-use">4. How We Use Your Information</h2>
+            <h3>4.1 Primary Uses</h3>
+            <ul>
+                <li><strong>Service Delivery:</strong> Extract, save, and sync your recipes across devices.</li>
+                <li><strong>Account Management:</strong> Authenticate you and manage your subscription.</li>
+                <li><strong>Feature Improvement:</strong> Understand which websites work well for extraction.</li>
+                <li><strong>Customer Support:</strong> Respond to your questions and resolve issues.</li>
+            </ul>
+
+            <h3>4.2 AI Processing</h3>
+            <p>When structured recipe data isn't available on a webpage, you can choose to use AI extraction. If enabled, we send only relevant page text (no account or payment data) to our processor to transform content into recipe fields. According to the processor’s documentation, inputs/outputs may be retained in abuse-monitoring logs for up to 30 days, and are not used to train their models. You can turn off AI extraction anytime in <em>Settings → Privacy</em>. </p>
+
+            <h3>4.3 What We Don't Do</h3>
+            <ul>
+                <li>Sell or share your personal information for advertising.</li>
+                <li>Share your recipes with other users without permission.</li>
+                <li>Use your recipes to train AI models.</li>
+                <li>Send promotional emails without consent.</li>
+            </ul>
+
+            <h2 id="third-party">5. Third-Party Services</h2>
+            <div class="highlight-box">
+                <p>We use trusted third-party services to provide our features. Each service has been selected for their strong privacy practices.</p>
+            </div>
+
+            <h3>5.1 Supabase (Database & Authentication)</h3>
+            <ul>
+                <li><strong>Purpose:</strong> Store your account data and recipes securely in the cloud.</li>
+                <li><strong>Data Shared:</strong> Email, encrypted password, recipe data.</li>
+                <li><strong>Location:</strong> All data is processed and stored in the United States.</li>
+                <li><strong>Security:</strong> Postgres Row-Level Security and fine-grained storage policies ensure only you can access your data.</li>
+                <li><a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase Privacy Policy</a></li>
+            </ul>
+
+            <h3>5.2 OpenAI (AI Recipe Extraction)</h3>
+            <ul>
+                <li><strong>Purpose:</strong> Extract recipe information from unstructured webpage content.</li>
+                <li><strong>Data Shared:</strong> Relevant webpage text content only (no account or payment data).</li>
+                <li><strong>Retention:</strong> Inputs/outputs may be retained up to 30 days for abuse monitoring (per vendor documentation); not used for training.</li>
+                <li><strong>Opt-out:</strong> Disable AI extraction in <em>Settings → Privacy</em> or use the “Save Recipe” button for JSON-LD extraction only.</li>
+                <li><a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">OpenAI Privacy Policy</a></li>
+            </ul>
+
+            <h3>5.3 Stripe (Payment Processing)</h3>
+            <ul>
+                <li><strong>Purpose:</strong> Process premium subscription payments.</li>
+                <li><strong>Data Shared:</strong> We never see your payment information.</li>
+                <li><strong>Security:</strong> PCI DSS Level 1 certified.</li>
+                <li><strong>Direct Relationship:</strong> Payment data is between you and Stripe.</li>
+                <li><a href="https://stripe.com/privacy" target="_blank" rel="noopener">Stripe Privacy Policy</a></li>
+            </ul>
+
+            <h3 id="subprocessors">5.4 Subprocessors & International Transfers</h3>
+            <p>We may transfer personal data to processors in the United States. Where applicable, we rely on the EU-U.S. Data Privacy Framework and/or the European Commission’s Standard Contractual Clauses to safeguard transfers. Our current processors are listed above (Supabase, OpenAI, Stripe). We will update this list if we add or replace processors.</p>
+
+            <h2 id="data-storage">6. Data Storage & Security</h2>
+            <h3>6.1 Where We Store Data</h3>
+            <ul>
+                <li><strong>Local Storage:</strong> Chrome browser storage on your device for offline access.</li>
+                <li><strong>Cloud Storage:</strong> Supabase cloud infrastructure (all data processed and stored in the United States).</li>
+                <li><strong>Sync Queue:</strong> Temporary storage for syncing when you're offline.</li>
+            </ul>
+
+            <h3>6.2 Security Measures</h3>
+            <ul>
+                <li><strong>Encryption:</strong> Data encrypted in transit (TLS) and at rest.</li>
+                <li><strong>Authentication:</strong> Secure password hashing using bcrypt with per-user salts.</li>
+                <li><strong>Access Control:</strong> Principle of least privilege, Postgres Row-Level Security, and storage policies.</li>
+                <li><strong>Secrets:</strong> API keys stored on server side; never exposed to the client.</li>
+                <li><strong>Maintenance:</strong> Regular dependency updates and security patches.</li>
+            </ul>
+
+            <h3>6.3 Data Retention</h3>
+            <ul>
+                <li><strong>Active Accounts:</strong> Data retained while account is active.</li>
+                <li><strong>Deleted Accounts:</strong> Data removed within 30 days of account deletion; backups roll off after 30 days.</li>
+                <li><strong>Guest Data:</strong> Local data persists until you clear browser data or uninstall the extension.</li>
+                <li><strong>Usage & Error Logs:</strong> 90 days (then aggregated/anonymized).</li>
+                <li><strong>Payment Records:</strong> Up to 7 years to meet tax and accounting obligations.</li>
+            </ul>
+
+            <h3>6.4 Security Incidents</h3>
+            <p>If we learn of a security incident that affects your information, we will notify you and applicable regulators as required by law and take steps to mitigate harm.</p>
+
+            <h2 id="your-rights">7. Your Rights</h2>
+            <div class="highlight-box">
+                <strong>You have control over your data.</strong> We respect your rights under GDPR, CCPA/CPRA, and other privacy laws.
+            </div>
+
+            <h3>7.1 Your Privacy Rights</h3>
+            <ul>
+                <li><strong>Access:</strong> Request a copy of your personal data.</li>
+                <li><strong>Correction:</strong> Update or correct inaccurate information.</li>
+                <li><strong>Deletion:</strong> Delete your account and data.</li>
+                                 <li><strong>Portability:</strong> Request a copy of your data in a portable format.</li>
+                <li><strong>Objection/Opt-out:</strong> Opt-out of certain processing (e.g., analytics).</li>
+                <li><strong>Restriction:</strong> Ask us to limit how we use your data.</li>
+            </ul>
+
+            <h3>7.2 How to Exercise Your Rights</h3>
+            <p>You can exercise most rights directly in the extension:</p>
+                         <ul>
+                 <li><strong>Data Requests:</strong> Email us to request a copy of your data or other privacy rights.</li>
+                 <li><strong>Update Info:</strong> Edit recipes and account settings anytime.</li>
+                 <li><strong>Delete Account:</strong> Use the in-app Delete feature or email us to permanently delete your account. This removes your recipes, folders, sync data, and account information from our systems within 30 days (plus backup cycle).</li>
+             </ul>
+
+            <h3>7.3 California & Other U.S. State Rights</h3>
+            <p>California residents (and residents of certain other U.S. states) may request access, correction, deletion, and information about our data practices. We will respond to verified requests within the timelines required by law (generally within <strong>45 days</strong>). We do not sell or share personal information for cross-context behavioral advertising. We honor opt-out preference signals where applicable (e.g., <strong>Global Privacy Control</strong>).</p>
+
+            <h3>7.4 European Economic Area & UK (GDPR)</h3>
+            <ul>
+                <li><strong>Controller:</strong> Jaxbit LLC (address below).</li>
+                <li><strong>Purposes & Legal Bases:</strong>
+                    <ul>
+                        <li>Account & sync → <em>Contract</em> (Art. 6(1)(b)).</li>
+                        <li>Usage analytics (non-essential) → <em>Legitimate interests</em> (Art. 6(1)(f)); you can opt-out.</li>
+                        <li>Optional AI extraction → <em>Consent</em> (Art. 6(1)(a)); you can withdraw at any time.</li>
+                    </ul>
+                </li>
+                <li><strong>Recipients/Processors:</strong> Supabase (hosting/auth), OpenAI (AI processing), Stripe (payments).</li>
+                <li><strong>International Transfers:</strong> Where applicable, protected by the EU-U.S. Data Privacy Framework and/or Standard Contractual Clauses (2021/914).</li>
+                <li><strong>Retention:</strong> See Section 6.3 and the Notice at Collection table.</li>
+                <li><strong>Rights:</strong> Access, rectification, erasure, restriction, portability, objection, and the right to withdraw consent; you may also lodge a complaint with your local supervisory authority.</li>
+            </ul>
+
+            <h3>7.5 Appeals (CO/VA and similar laws)</h3>
+            <p>If we deny your request, you may appeal by replying to our decision or emailing <a href="mailto:jack.jaxbit@gmail.com">jack.jaxbit@gmail.com</a> with “Privacy Appeal” in the subject. We will respond within <strong>45–60 days</strong> with our decision and information on how to contact your Attorney General if you disagree.</p>
+
+            <h2 id="cookies">8. Cookies & Local Storage</h2>
+            <h3>8.1 Chrome Extension Storage</h3>
+            <p>We use Chrome's built-in storage APIs to:</p>
+            <ul>
+                <li>Store your recipes locally for offline access.</li>
+                <li>Maintain your authentication session.</li>
+                <li>Remember your preferences (theme, settings).</li>
+                <li>Track guest usage limits.</li>
+            </ul>
+
+            <h3>8.2 Website Cookies</h3>
+            <p>If you visit our website or documentation:</p>
+            <ul>
+                <li>Essential cookies for site functionality.</li>
+                <li>No tracking or advertising cookies.</li>
+                <li>Session cookies that expire when you close your browser.</li>
+            </ul>
+
+            <h3>8.3 Managing Storage</h3>
+            <p>You can clear extension data through:</p>
+            <ul>
+                <li>Chrome Settings → Privacy and Security → Clear browsing data.</li>
+                <li>Extension settings → Sign out (clears authenticated data).</li>
+                <li>Uninstalling the extension (removes all local data).</li>
+            </ul>
+
+            <h2 id="children">9. Children's Privacy</h2>
+            <p>justcook is not directed to children under 13, and we do not knowingly collect personal information from children under 13. If we learn that a child under 13 has provided personal data, we will delete it promptly. If you are a parent or guardian and believe your child has provided personal information, please contact us immediately.</p>
+            <p class="note">We do not sell or share personal information; if we ever offered teen accounts, we would obtain opt-in consent for any sale/share as required by applicable law.</p>
+
+            <h2 id="changes">10. Changes to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time. When we make changes:</p>
+            <ul>
+                <li>The "Last Updated" date at the top will be revised.</li>
+                <li>For significant changes, we'll notify users via the extension.</li>
+                <li>Continued use after changes constitutes acceptance.</li>
+                <li>You can always access the latest version at this URL.</li>
+            </ul>
+
+            <h2 id="contact">11. Contact Us</h2>
+            <div class="contact-info">
+                <h3>Have Questions or Concerns?</h3>
+                <p>We're here to help and address any privacy concerns you may have.</p>
+                <p><strong>Email:</strong> <a href="mailto:jack.jaxbit@gmail.com">jack.jaxbit@gmail.com</a></p>
+                <p><strong>Response Time:</strong> Within 48 hours</p>
+                                 <p><strong>For Privacy Requests:</strong></p>
+                 <ul>
+                     <li>Data access requests</li>
+                     <li>Account deletion</li>
+                     <li>Data portability requests</li>
+                     <li>Privacy concerns</li>
+                 </ul>
+                <p><strong>Mailing Address:</strong><br>Jaxbit LLC<br>3177 Benton St<br>Wheat Ridge, CO 80214<br>United States</p>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 40px;">
+                <h3 style="margin-top: 0;">Quick Privacy Summary</h3>
+                <ul style="margin-bottom: 0;">
+                    <li>✅ We never sell or share your data for advertising</li>
+                    <li>✅ Your recipes are private to you</li>
+                                         <li>✅ You can delete your data anytime or request a copy</li>
+                    <li>✅ Data encrypted in transit and at rest</li>
+                    <li>✅ Third-party services are carefully selected</li>
+                    <li>✅ You can use the extension without an account</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>© 2025 Jaxbit LLC. All rights reserved.</p><p>justcook is a product of Jaxbit LLC.</p>
+            <p style="margin-top: 10px;">
+                <a href="#">Privacy Policy</a> • 
+                <a href="terms.html">Terms of Service</a> • 
+                <a href="mailto:jack.jaxbit@gmail.com">Contact</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+        
+        const savedTheme = localStorage.getItem('privacy-policy-theme') || 'dark';
+        function setTheme(theme) {
+            if (theme === 'light') {
+                body.setAttribute('data-theme', 'light');
+                themeToggle.textContent = '☀️ Light';
+            } else {
+                body.removeAttribute('data-theme');
+                themeToggle.textContent = '🌙 Dark';
+            }
+            localStorage.setItem('privacy-policy-theme', theme);
+        }
+        setTheme(savedTheme);
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            setTheme(newTheme);
+        });
+    </script>
+</body>
+</html>
